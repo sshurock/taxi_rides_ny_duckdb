@@ -1,4 +1,4 @@
-{{ config(materialized='table') }}
+{{ config(materialized='table', tags=["piperider"]) }}
 
 with trips_data as (
 select * from {{ ref('fact_trips') }}
